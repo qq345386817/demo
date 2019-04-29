@@ -41,7 +41,7 @@
     NSString * path = [[NSBundle mainBundle] pathForResource:@"core" ofType:@"js"];
     NSString * html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     [self.jsContext evaluateScript:html];
-    JSValue *result = [self.jsContext evaluateScript:[NSString stringWithFormat:@"hello(%@)", name]];
+    JSValue *result = [self.jsContext evaluateScript:[NSString stringWithFormat:@"hello('%@')", name]];
     return [result toString];
 }
 
