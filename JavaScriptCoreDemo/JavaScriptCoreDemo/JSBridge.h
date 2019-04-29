@@ -13,11 +13,10 @@
 
 @interface JSBridge : NSObject
 
-@property (nonatomic,strong) JSContext *jsContext;
 
-
-- (void)bridgeForJs;
 - (void)regiestJSFunctionInContext:(JSContext *) jsContext;
+
+- (NSString *)callJSHello:(NSString *)name;
 
 @end
 

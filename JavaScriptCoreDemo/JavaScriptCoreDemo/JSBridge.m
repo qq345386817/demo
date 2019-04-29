@@ -8,20 +8,17 @@
 
 #import "JSBridge.h"
 
+@interface JSBridge()
+
+@property (nonatomic,strong) JSContext *jsContext;
+
+@end
+
 @implementation JSBridge
-
-
-- (void)bridgeForJs {
-    
-    self.jsContext = [[JSContext alloc]init];
-    
-//    [self useJSExprot];
-    
-}
 
 - (void)regiestJSFunctionInContext:(JSContext *) jsContext {
     //注册一个函数
-    [jsContext evaluateScript:@"var hello = function(){ return 'hello' }"];
+    [self.jsContext evaluateScript:@"var hello = function(){ return 'hello' }"];
 }
 
 //直接执行js代码
@@ -30,7 +27,6 @@
     JSValue *exeFunction1 = [self.jsContext evaluateScript:@"function hi(){ return 'hi' }; hi()"];
     //执行一个闭包js
     JSValue *exeFunction2 = [self.jsContext evaluateScript:@"(function(){ return 'hi' })()"];
-    
 }
 
 //执行一段js文件中的代码
@@ -39,6 +35,14 @@
     NSString * path = [[NSBundle mainBundle] pathForResource:@"core" ofType:@"js"];
     NSString * html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     JSValue *constructor = [self.jsContext evaluateScript:html];
+}
+
+-(NSString *)callJSHello:(NSString *)name {
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"core" ofType:@"js"];
+    NSString * html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    [self.jsContext evaluateScript:html];
+    JSValue *result = [self.jsContext evaluateScript:[NSString stringWithFormat:@"hello(%@)", name]];
+    return [result toString];
 }
 
 //注册js方法，然后在利用JSValue调用
@@ -52,8 +56,6 @@
     JSValue *jsFunction = [self.jsContext evaluateScript:@" (function(){ return 'hello objc' })"];
     //调用
     JSValue *value2 = [jsFunction callWithArguments:nil];
-    
-
 }
 
 
@@ -90,9 +92,16 @@
     self.jsContext[@"person"] = p;
     
     JSValue *value = [self.jsContext evaluateScript:@"person.whatYouName()"];
-    
 }
 
+#pragma mark - Lazy Load
+
+-(JSContext *)jsContext {
+    if (_jsContext == nil) {
+        _jsContext = [[JSContext alloc] init];
+    }
+    return _jsContext;
+}
 
 @end
  
