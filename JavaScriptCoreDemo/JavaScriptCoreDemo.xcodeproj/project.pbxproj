@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0445A3B8227E8DD6003268AE /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 0445A3B7227E8DD6003268AE /* index.html */; };
+		0445A3BB227E91E1003268AE /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445A3BA227E91E1003268AE /* WebViewController.m */; };
 		045534D2227697C900D5F78A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 045534D1227697C900D5F78A /* AppDelegate.m */; };
 		045534D5227697C900D5F78A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045534D4227697C900D5F78A /* ViewController.m */; };
 		045534D8227697C900D5F78A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045534D6227697C900D5F78A /* Main.storyboard */; };
@@ -30,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0445A3B7227E8DD6003268AE /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		0445A3B9227E91E1003268AE /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		0445A3BA227E91E1003268AE /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		045534CD227697C900D5F78A /* JavaScriptCoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JavaScriptCoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045534D0227697C900D5F78A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		045534D1227697C900D5F78A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,11 +99,14 @@
 				045534D3227697C900D5F78A /* ViewController.h */,
 				045534D4227697C900D5F78A /* ViewController.m */,
 				045534D6227697C900D5F78A /* Main.storyboard */,
+				0445A3B9227E91E1003268AE /* WebViewController.h */,
+				0445A3BA227E91E1003268AE /* WebViewController.m */,
 				045534D9227697CA00D5F78A /* Assets.xcassets */,
 				045534DB227697CA00D5F78A /* LaunchScreen.storyboard */,
 				045534DE227697CA00D5F78A /* Info.plist */,
 				045534DF227697CA00D5F78A /* main.m */,
 				045534F62276985A00D5F78A /* core.js */,
+				0445A3B7227E8DD6003268AE /* index.html */,
 				045534F42276985A00D5F78A /* JSBridge.h */,
 				045534F52276985A00D5F78A /* JSBridge.m */,
 				045534F922769FBF00D5F78A /* Person.h */,
@@ -196,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0445A3B8227E8DD6003268AE /* index.html in Resources */,
 				045534DD227697CA00D5F78A /* LaunchScreen.storyboard in Resources */,
 				045534DA227697CA00D5F78A /* Assets.xcassets in Resources */,
 				045534D8227697C900D5F78A /* Main.storyboard in Resources */,
@@ -218,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045534D5227697C900D5F78A /* ViewController.m in Sources */,
+				0445A3BB227E91E1003268AE /* WebViewController.m in Sources */,
 				045534E0227697CA00D5F78A /* main.m in Sources */,
 				045534FB22769FBF00D5F78A /* Person.m in Sources */,
 				045534D2227697C900D5F78A /* AppDelegate.m in Sources */,

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <script>
+            function callbackFunc(errorCode, response) {
+                document.getElementById("token_ta").textContent = response;
+            }
+            function getAuthToken() {
+                window.webkit.messageHandlers.getAuthtokenForH5.postMessage({callback:'callbackFunc(%@,%@)();'});
+            }
+        </script>
+    </head>
+    <body>
+        <textarea id="token_ta"></textarea>
+        <br/>
+        <button onclick="getAuthToken()">Click Me!</button>
+    </body>
+</html>
