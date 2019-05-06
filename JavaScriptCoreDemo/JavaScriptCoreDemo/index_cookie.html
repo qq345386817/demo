@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <script>
+            function showCookie() {
+                document.getElementById("token_ta").textContent = document.cookie;
+            }
+        </script>
+    </head>
+    <body>
+        <textarea id="token_ta"></textarea>
+        <br/>
+        <button onclick="showCookie()">Show Cookie!</button>
+    </body>
+</html>
