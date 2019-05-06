@@ -62,6 +62,22 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
+        <!--Cookie-->
+        <scene sceneID="MOV-xU-aoZ">
+            <objects>
+                <viewController id="Taa-iC-1Lc" customClass="WebViewCookieController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ggC-Yv-Yoq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zlo-Ul-cCv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cookie" id="cit-2I-jKY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9k8-c6-lFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="203" y="1360"/>
+        </scene>
         <!--WKWebView-->
         <scene sceneID="sDO-6x-pha">
             <objects>
@@ -84,12 +100,14 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yg0-4x-SKs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XIp-J3-01N">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="HQg-gg-7VB"/>
                         <segue destination="orF-bJ-hzq" kind="relationship" relationship="viewControllers" id="isV-UY-KrY"/>
+                        <segue destination="Taa-iC-1Lc" kind="relationship" relationship="viewControllers" id="0sM-Du-OPK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPb-II-yEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
